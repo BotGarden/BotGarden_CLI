@@ -1,0 +1,25 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - rel
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }} # Must be unique in Heroku
+          heroku_email: ${{ secrets.HEROKU_APP_EMAIL }}
+          usedocker: true
+          docker_heroku_process_type: worker
+          docker_build_args: |
+            NODE_ENV_ARG
+            EXAMPLEBOT_TOKEN_ARG
+        env:
+          NODE_ENV_ARG: production
+          EXAMPLEBOT_TOKEN_ARG: ${{ secrets.EXAMPLEBOT_TOKEN }} # Replace with BOT token
