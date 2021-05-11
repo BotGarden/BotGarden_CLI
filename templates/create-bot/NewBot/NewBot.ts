@@ -7,13 +7,13 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 let allProperties: any = {
-    token: process.env.EXAMPLEBOT_TOKEN,
+    token: process.env.NEWBOT_TOKEN,
     prefix: properties.prefix,
     commands: properties.commands,
     botDirName: path.basename(__dirname),
     botFileName: path.basename(__filename)
 }
-export class ExampleBot extends BaseBot {
+export class NewBot extends BaseBot {
     constructor() {
         super(allProperties);
     }
