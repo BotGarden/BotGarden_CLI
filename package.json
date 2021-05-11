@@ -1,10 +1,9 @@
 {
-  "name": "@botgarden/botgarden",
+  "name": "botgarden",
   "version": "1.0.0",
   "description": "A CLI to bootstrap components of a botgarden project",
   "main": "src/index.js",
   "bin": {
-    "@botgarden/botgarden": "bin/botgarden",
     "botgarden": "bin/botgarden"
   },
   "publishConfig": {
