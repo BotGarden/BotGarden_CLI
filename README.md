@@ -4,14 +4,17 @@ Bot Garden is a Discord bot-building framework inspired by a local community gar
 
 ## Quick Start
 
+**Prerequisites:**
+
 1. First, inside of the root directory, install `node_modules` using `npm install`.
 
 2. Then, run `npm link` to create a sym-link to run the cli.
 
-3. At this point you are able to run the CLI to initialize a garden (using `botgarden create-garden`), initialize a new bot from within the garden (using `botgarden create-bot`), or initialize a new bot command (using `botgarden create-command`).
+At this point you are able to run the CLI to initialize a garden (using `botgarden create-garden`), initialize a new bot from within the garden (using `botgarden create-bot`), or initialize a new bot command (using `botgarden create-command`).
 
 ## Initialize a New Garden Project
 
+**Prerequisites:** Completed `Quick Start` section.
 ## Create a new Bot
 
 ## Create a new Command
